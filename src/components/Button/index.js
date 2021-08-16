@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const Button = ()=>{
+const Button = (props)=>{
     return(
-        <ButtonClick>Next</ButtonClick>
+        <ButtonClick onClick={props.onClick}>Next</ButtonClick>
     )
 };
 

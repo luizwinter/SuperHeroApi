@@ -7,19 +7,26 @@ import Button from './components/Button'
 
 const baseURL = 'https://www.superheroapi.com/api.php/10226445205696427/'
 
+var count = 1;
+
 export default function App(){
 
   const [hero, setHero] = React.useState(null);
 
   React.useEffect(()=>{
-    axios.get(`${baseURL}1`).then((response) =>{
+    axios.get(`${baseURL}${count}`).then((response) =>{
       setHero(response.data);
     });
-  }, []);
+  }, [changeHero]);
 
     if(!hero) return null;
     console.log(hero);
     
+    function changeHero(){
+      count += 1;      
+    }
+
+
 
     return(
       <>
@@ -35,7 +42,7 @@ export default function App(){
           dur={hero.powerstats.durability} 
           power={hero.powerstats.power} 
           combat={hero.powerstats.combat}/>
-          <Button />
+          <Button onClick={changeHero}/>
           </Container>
         </Box>
         
