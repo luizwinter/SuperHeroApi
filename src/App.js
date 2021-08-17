@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import Card from './components/Card'
+import Card from './components/Card';
 import styled from 'styled-components';
-import Banner from './components/Banner'
-import Button from './components/Button'
+import Banner from './components/Banner';
+import Button from './components/Button';
+import Footer from './components/Footer';
 
 const baseURL = 'https://www.superheroapi.com/api.php/10226445205696427/'
 
@@ -63,10 +64,10 @@ export default function App(){
             <Button content={"Next"} onClick={nextHero}/>
           </ButtonsDiv>
           <Button content={"Random"} onClick={randomHero}/>
-
           </Container>
+          <Footer />
         </Box>
-        
+
       </>
   )
 
