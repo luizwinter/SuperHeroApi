@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Button = (props)=>{
     return(
-        <ButtonClick onClick={props.onClick}>Next</ButtonClick>
+        <ButtonClick onClick={props.onClick}>{props.content}</ButtonClick>
     )
 };
 
@@ -17,6 +17,7 @@ const ButtonClick = styled.button`
     text-decoration: none;
     display: inline-block;
     font-size: 1rem;
+    margin-right: 10px;
     margin-top: 10px;}
     &:hover{
         cursor: pointer;

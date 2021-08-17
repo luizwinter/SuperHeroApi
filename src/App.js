@@ -17,14 +17,30 @@ export default function App(){
     axios.get(`${baseURL}${count}`).then((response) =>{
       setHero(response.data);
     });
-  }, [changeHero]);
+  }, [nextHero]);
 
-    if(!hero) return null;
-    console.log(hero);
-    
-    function changeHero(){
+    if(!hero) return null;    
+    function nextHero(){
       count += 1;      
+    };
+
+    function previousHero(){
+      if(count - 1 === 0){
+        count= 1;
+      }else{
+        count += -1;
+      };
+    };
+
+    function randomHero(){
+      let x = Math.floor(Math.random() * 732);
+      count = x;
+
     }
+
+    
+
+
 
 
 
@@ -42,7 +58,12 @@ export default function App(){
           dur={hero.powerstats.durability} 
           power={hero.powerstats.power} 
           combat={hero.powerstats.combat}/>
-          <Button onClick={changeHero}/>
+          <ButtonsDiv>
+            <Button content={"Back"} onClick={previousHero}/>
+            <Button content={"Next"} onClick={nextHero}/>
+          </ButtonsDiv>
+          <Button content={"Random"} onClick={randomHero}/>
+
           </Container>
         </Box>
         
@@ -65,5 +86,12 @@ background: linear-gradient(0deg, rgba(63,94,251,1) 0%, rgba(77,14,14,1) 100%);
 const Container = styled.div`
   height: 100vh;
   text-align: center;
+
+`;
+
+const ButtonsDiv = styled.div`
+  display: flex ;
+  justify-content: center;
+  align-items: center;
 
 `;

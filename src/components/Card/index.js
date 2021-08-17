@@ -53,9 +53,9 @@ const Wrap = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 300px;
-    margin-top: 2rem;
+    margin-top: 10rem;
     z-index: 2;
+
 `;
 
 const Img = styled.img`
