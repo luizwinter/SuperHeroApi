@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         color: white;
         font-family: 'Patua One', cursive;
+        font-size: 1.2rem;
     }
 
 

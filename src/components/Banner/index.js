@@ -6,7 +6,12 @@ const Banner = () =>{
         <>
         <Box>
         <Img src={BG} />
-        <Content>Super Hero API</Content>
+        <Content>
+            <H2>Super Hero API</H2>
+            <P>Look his stats and compare to another one! </P>
+            <P>Who's the must stronger or powerfull? Let's find it! </P>
+
+        </Content>
         </Box>
 
         </>
@@ -24,11 +29,21 @@ justify-content: center;
 `;
 
 const Content = styled.div`
-    font-size: 5rem;
+    font-size: 3rem;
     position: absolute;
     font-family: 'Permanent Marker', cursive;
     margin-top: 20%;
     text-shadow: 15px 15px 8px rgba(204, 150, 150, 1);
+`;
+
+const P = styled.p`
+    font-size: 2rem;
+    line-height: 1rem;
+    opacity: 0.5;
+`;
+
+const H2 = styled.h2`
+    line-height: 1rem;
 `;
 
 const Img = styled.img`

@@ -50,20 +50,20 @@ export default function App(){
       <Box>
         <Banner />
         <Container>
-        <Card img={hero.image.url}
-          name={hero.name}
-          bio={hero.work.occupation}
-          int={hero.powerstats.intelligence} 
-          str={hero.powerstats.strength} 
-          speed={hero.powerstats.speed} 
-          dur={hero.powerstats.durability} 
-          power={hero.powerstats.power} 
-          combat={hero.powerstats.combat}/>
-          <ButtonsDiv>
-            <Button content={"Back"} onClick={previousHero}/>
-            <Button content={"Next"} onClick={nextHero}/>
-          </ButtonsDiv>
-          <Button content={"Random"} onClick={randomHero}/>
+          <Card img={hero.image.url}
+            name={hero.name}
+            bio={hero.work.occupation}
+            int={hero.powerstats.intelligence} 
+            str={hero.powerstats.strength} 
+            speed={hero.powerstats.speed} 
+            dur={hero.powerstats.durability} 
+            power={hero.powerstats.power} 
+            combat={hero.powerstats.combat}/>
+            <ButtonsDiv>
+              <Button content={"Back"} onClick={previousHero}/>
+              <Button content={"Next"} onClick={nextHero}/>
+            </ButtonsDiv>
+            <Button content={"Random"} onClick={randomHero}/>
           </Container>
           <Footer />
         </Box>
@@ -87,6 +87,7 @@ background: linear-gradient(0deg, rgba(63,94,251,1) 0%, rgba(77,14,14,1) 100%);
 const Container = styled.div`
   height: 100vh;
   text-align: center;
+  margin-bottom: 5rem;
 
 `;
 

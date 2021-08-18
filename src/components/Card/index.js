@@ -54,7 +54,7 @@ const Wrap = styled.div`
     flex-direction: column;
     align-items: center;
     z-index: 2;
-    margin-top: 10rem;
+    margin-top: 5rem;
 
 `;
 
