@@ -20,7 +20,6 @@ export default function App(){
   const [previouscard, setPreviousCard] = useState(null)
   const [nextcard, setNextCard] = useState(null)
 
-  
 
   useEffect(()=>{
 
@@ -29,14 +28,8 @@ export default function App(){
   }, []);
 
   function checkChange(){
-    console.log("chanchenge?");
 
     if(canchange === true) {
-
-      console.log("yes")
-
-      console.log("enter effect")
-
 
       axios.get(`${baseURL}${count[0]}`).then((response) =>{
         setHero(response.data);
@@ -69,18 +62,19 @@ export default function App(){
         count[1] += 1;  
 
         count[3] = true;
-      }if(count[1] === 732){
+
+      }else if(count[1] === 732){
+
         count[0] += 1;  
         count[2] += 1;  
-      } else{
+      }else{
         count[0] += 1;  
         count[1] += 1;  
         count[2] += 1;  
+
       };
 
       canchange = true;
-
-      console.log(count)  
         
       checkChange()
     };
@@ -156,6 +150,7 @@ const Container = styled.div`
   height: 100vh;
   text-align: center;
   margin-bottom: 5rem;
+  z-index: 2;
 
 `;
 
